@@ -1,2 +1,2 @@
 #!/bin/bash
-tr -dc '[:alnum:]' < /dev/random | fold -w "$1" | head -n 1
+cat /dev/urandom | tr -dc [:alnum:] | head -c $1
