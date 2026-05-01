@@ -1,10 +1,9 @@
-# 0-release.sh
+# 0x00_introduction_cybersecurity
 
-This bash script displays the Linux distribution name (distributor ID) in a concise single-line output using the  * lsb_release -is * command.
+Small descriptions of the tasks in this directory:
 
-make as executable :(chmod +x 0-release.sh), and run it:
-
-./0-release.sh
-Kali
-
-Info Alex : It works because -i asks for the distributor info and -s makes the output short (just the value, no label).
+- `0-release.sh`: prints the Linux distribution name.
+- `1-gen_password.sh`: generates a random password of the requested length.
+- `2-sha256_validator.sh`: checks whether a file matches a given SHA256 hash.
+- `3-gen_key.sh`: creates a 4096-bit RSA SSH key pair.
+- `4-root_process.sh`: lists processes started by a specific user.
