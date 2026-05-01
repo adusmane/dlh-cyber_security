@@ -1,4 +1,4 @@
-# 0x00_introduction_cybersecurity
+Introduction to Cyber Security project 
 
 There is a quizz to be able to arrive to these exercises . After quizz solved , the tasks will appear .
 The quizz must be passed with 100%, what is not answered correctly is marked with red and can be re-done.
