@@ -11,4 +11,4 @@ Small personal descriptions of the tasks in this directory, but the exercises su
 - `3-gen_key.sh`: creates a 4096-bit RSA SSH key pair.
 - `4-root_process.sh`: lists processes started by a specific user.
 
-The all exercise can be passed with 75% .
+The all exercise can be passed with 80% .
