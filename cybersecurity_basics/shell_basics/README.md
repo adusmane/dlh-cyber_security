@@ -12,6 +12,6 @@ Short task summary:
 
 The tasks are easy as there is documentation attached to the project.
 
-Can be passed with 75%
+Can be passed with 80%
 
 
