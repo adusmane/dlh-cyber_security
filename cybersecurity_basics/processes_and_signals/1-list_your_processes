@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-#Bash script that displays a list of currently running processes with different conditions
-ps -ef --forest
+#Bash script that displays a list of currently running processes with different conditions, tried first ps -ef --forest, but actually need user-oriented format with USER header, not UID
+ps auxf
