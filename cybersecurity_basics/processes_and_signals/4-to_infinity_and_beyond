@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Bash script that displays To infinity and beyond indefinitely(dont forget chmod +x), with a 2 sec gap
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
+
