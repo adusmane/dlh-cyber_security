@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#script creates a PID file, displays a message indefinitely, handles SIGTERM and SIGINT signala
+
+echo $$ > /tmp/myscript.pid
+
+handle_sigterm() 
+{
+	echo "I hate the kill command"
+	rm -f /tmp/myscript.pid
+	exit 0
+}
+
+handle_sigint() 
+{	
+	echo "Y U no love me?!"
+}
+
+handle_sigquit() 
+{
+	rm -f /tmp/myscript.pid
+	exit 0
+}
+
+trap handle_sigterm SIGTERM
+trap handle_sigint SIGINT
+trap handle_sigquit SIGQUIT
+
+while true 
+do
+	echo "To infinity and beyond"
+	sleep 1
+done
