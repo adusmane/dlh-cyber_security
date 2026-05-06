@@ -6,18 +6,18 @@ PROCESS_SCRIPT="./manage_my_process"
 
 start_process() 
 {
-	$PROCESS_SCRIPT &
-	PROCESS_PID=$!
-	echo $PROCESS_PID > $PID_FILE
-	echo "manage_my_process started"
+    $PROCESS_SCRIPT &
+    PROCESS_PID=$!
+    echo "$PROCESS_PID" > "$PID_FILE"
+    echo "manage_my_process started"
 }
 
 stop_process() 
 {
-	if [ -f $PID_FILE ]; then
-        PID=$(cat $PID_FILE)
-        kill $PID 2>/dev/null
-        rm -f $PID_FILE
+    if [ -f "$PID_FILE" ]; then
+        PID=$(cat "$PID_FILE")
+        kill "$PID" 2>/dev/null
+        rm -f "$PID_FILE"
         echo "manage_my_process stopped"
     else
         pkill -f "manage_my_process" 2>/dev/null
@@ -27,10 +27,10 @@ stop_process()
 
 restart_process() 
 {
-	stop_process
-        sleep 1
-        start_process
-        echo "manage_my_process restarted"
+    stop_process
+    sleep 1
+    start_process
+    echo "manage_my_process restarted"
 }
 
 case "$1" in
@@ -48,3 +48,5 @@ case "$1" in
         exit 1
         ;;
 esac
+
+
