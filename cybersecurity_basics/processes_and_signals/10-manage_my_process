@@ -9,7 +9,6 @@ start_process()
     $PROCESS_SCRIPT &
     PROCESS_PID=$!
     echo "$PROCESS_PID" > "$PID_FILE"
-    echo "manage_my_process started"
 }
 
 stop_process() 
@@ -18,14 +17,12 @@ stop_process()
         PID=$(cat "$PID_FILE")
         kill "$PID" 2>/dev/null
         rm -f "$PID_FILE"
-        echo "manage_my_process stopped"
     else
         pkill -f "manage_my_process" 2>/dev/null
-        echo "manage_my_process stopped"
     fi
 }
 
-restart_process() 
+restart_process()
 {
     stop_process
     sleep 1
@@ -36,9 +33,11 @@ restart_process()
 case "$1" in
     start)
         start_process
+        echo "manage_my_process started"
         ;;
     stop)
         stop_process
+        echo "manage_my_process stopped"
         ;;
     restart)
         restart_process
@@ -48,5 +47,4 @@ case "$1" in
         exit 1
         ;;
 esac
-
 
