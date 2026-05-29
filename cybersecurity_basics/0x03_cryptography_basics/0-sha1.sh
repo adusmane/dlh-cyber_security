@@ -1,2 +1,2 @@
 #!/bin/bash
-sha1sum <<< "$1" | cut -d' ' -f1 > 0_hash.txt
+printf "%s" "$1" | sha1sum | cut -d' ' -f1 > 0_hash.txt
