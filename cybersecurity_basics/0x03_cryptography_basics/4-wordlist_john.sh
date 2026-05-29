@@ -1,2 +1,2 @@
 #!/bin/bash
-john --wordlist=/usr/share/wordlists/rockyou.txt "$1" --format=Raw-MD5 --show | cut -d: -f2 > 4-password.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-md5 "$1" && john --show "$1" | tail -n +2 | cut -d: -f2 > 4-password.txt
