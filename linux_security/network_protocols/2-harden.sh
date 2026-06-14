@@ -1,2 +1,2 @@
 #!/bin/bash
-find / -type d -perm -o+w 2>/dev/null | while read dir; do echo "$dir"; chmod 755 "$dir"; done
+find / -type d -perm -o+w 2>/dev/null | while read dir; do chmod 755 "$dir" && printf "%s\n" "$dir"; done
