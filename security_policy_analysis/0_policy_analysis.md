@@ -1,6 +1,4 @@
-# Security Policy Assignment
-
-## Part A: Identify Missing Components
+Part A: Identify Missing Components
 
 | Missing Component | Why It's Important |
 |---|---|
@@ -17,7 +15,7 @@
 | Exception Process | Explains how users can request exceptions and ensures risks are reviewed before approval. |
 | Acknowledgment Section | Confirms that employees have read and accepted their responsibilities under the policy. |
 
-## Part B: Identify Weaknesses
+Part B: Identify Weaknesses
 
 | Quote from Policy | What's Wrong | Why It Matters |
 |---|---|---|
@@ -30,11 +28,11 @@
 | No mention of multi-factor authentication (MFA) | Modern authentication controls are missing. | Passwords alone are insufficient protection against credential theft. |
 | No password change/reset procedures | No instructions exist for compromised or forgotten passwords. | Users may continue using exposed credentials or create insecure recovery methods. |
 
-## Part C: Password Policy
+Part C: Password Policy
 
-# Password Policy
+Password Policy
 
-### Document Control
+Document Control
 
 | Field | Value |
 |---|---|
@@ -46,15 +44,15 @@
 | Approved By | Chief Information Security Officer (CISO) |
 | Classification | Internal |
 
-### 1. Purpose
+1. Purpose
 
 This policy establishes password management requirements to protect organizational systems, applications, and sensitive information from unauthorized access.
 
 The objective of this policy is to ensure that all users create, manage, and protect strong passwords and authentication credentials according to security best practices.
 
-### 2. Scope
+2. Scope
 
-**2.1 Applicability**
+2.1 Applicability
 
 This policy applies to:
 
@@ -63,7 +61,7 @@ This policy applies to:
 - Third-party vendors with authorized access
 - Temporary workers and interns
 
-**2.2 Systems/Assets Covered**
+2.2 Systems/Assets Covered
 
 This policy applies to:
 
@@ -75,16 +73,16 @@ This policy applies to:
 - Databases
 - Administrative and privileged accounts
 
-**2.3 Exclusions**
+2.3 Exclusions**
 
 The following are excluded:
 
 - Publicly accessible systems requiring no authentication
 - Test environments without access to company data
 
-### 3. Policy Statements
+3. Policy Statements
 
-**3.1 Password Creation Requirements**
+3.1 Password Creation Requirements**
 
 All users must create passwords that meet minimum security requirements.
 
@@ -96,7 +94,7 @@ Requirements:
 - Passwords must contain a combination of letters, numbers, and special characters where technically supported.
 - Users must use passphrases whenever possible.
 
-**3.2 Password Protection and Management**
+3.2 Password Protection and Management**
 
 Users are responsible for protecting their authentication credentials.
 
@@ -108,7 +106,7 @@ Requirements:
 - Approved password managers should be used for storing credentials.
 - Users must immediately report suspected password compromise.
 
-**3.3 Multi-Factor Authentication and Password Changes**
+3.3 Multi-Factor Authentication and Password Changes**
 
 Additional authentication controls must be used to reduce unauthorized access risks.
 
@@ -119,7 +117,7 @@ Requirements:
 - Default passwords provided by vendors must be changed before systems are placed into production.
 - Privileged accounts must follow stricter password requirements defined by IT Security standards.
 
-### 4. Roles and Responsibilities
+4. Roles and Responsibilities
 
 | Role | Responsibilities |
 |---|---|
@@ -129,9 +127,9 @@ Requirements:
 | All Employees | Create secure passwords, protect credentials, report incidents, and complete security training. |
 | System Administrators | Configure authentication systems, remove default credentials, and maintain access controls. |
 
-### 5. Compliance
+5. Compliance
 
-**5.1 Monitoring**
+5.1 Monitoring
 
 The IT Security Team will monitor compliance through:
 
@@ -140,7 +138,7 @@ The IT Security Team will monitor compliance through:
 - Security audits.
 - Access reviews.
 
-**5.2 Reporting**
+5.2 Reporting
 
 Security incidents involving passwords must be reported immediately to:
 
@@ -148,13 +146,13 @@ Security incidents involving passwords must be reported immediately to:
 - Information Security Team
 - Security Incident Response Team
 
-**5.3 Auditing**
+5.3 Auditing
 
 Password controls will be reviewed annually through security audits to verify compliance with this policy.
 
-### 6. Enforcement
+6. Enforcement
 
-**6.1 Violations**
+6.1 Violations
 
 Violations of this policy may result in:
 
@@ -165,7 +163,7 @@ Violations of this policy may result in:
 - Disciplinary action up to and including termination
 - Legal action where applicable
 
-**6.2 Reporting Violations**
+6.2 Reporting Violations
 
 Suspected violations must be reported through:
 
@@ -173,9 +171,9 @@ Suspected violations must be reported through:
 - Security incident reporting system
 - Information Security Manager
 
-### 7. Exceptions
+7. Exceptions
 
-**7.1 Exception Process**
+7.1 Exception Process
 
 Exceptions to this policy require:
 
@@ -185,7 +183,7 @@ Exceptions to this policy require:
 - Implementation of compensating controls if required.
 - Formal approval and documentation.
 
-**7.2 Exception Duration**
+7.2 Exception Duration
 
 All approved exceptions must have:
 
@@ -193,7 +191,7 @@ All approved exceptions must have:
 - Annual review by the Security Team.
 - Documentation of continued business justification.
 
-### 8. Definitions
+8. Definitions
 
 | Term | Definition |
 |---|---|
@@ -202,7 +200,7 @@ All approved exceptions must have:
 | Privileged Account | An account with elevated permissions that can modify systems or security settings. |
 | Credential | Information used to authenticate a user, such as passwords or authentication tokens. |
 
-### 9. Related Documents
+9. Related Documents
 
 - Information Security Policy
 - Access Control Policy
@@ -211,13 +209,13 @@ All approved exceptions must have:
 - Security Awareness Training Procedure
 - NIST SP 800-63B Digital Identity Guidelines
 
-### 10. Revision History
+10. Revision History
 
 | Version | Date | Author | Description |
 |---|---|---|---|
 | 1.0 | 2026-08-07 | Information Security Manager | Initial release |
 
-### 11. Acknowledgment
+11. Acknowledgment
 
 By accessing company systems, all users acknowledge that they have read, understood, and agree to comply with this Password Policy.
 
@@ -225,4 +223,4 @@ Users are responsible for protecting their credentials and reporting suspected s
 
 For formal acknowledgment tracking, use the company's policy acknowledgment system.
 
-*End of Policy Document*
+End of Policy Document
