@@ -486,3 +486,86 @@ For formal acknowledgment tracking, users must complete the company's policy ack
 ---
 
 End of Policy Document
+
+
+
+Technical Standards
+---
+
+Document Control
+
+| Field | Value |
+|---|---|
+| Document ID | STD-PWD-001 |
+| Version | 1.0 |
+| Owner | Information Security Team |
+| Classification | Internal |
+
+---
+
+1. Password Technical Requirements
+
+| Control | Standard |
+|---|---|
+| Minimum user password length | 14 characters |
+| Privileged account length | 20 characters recommended |
+| Password history | Prevent reuse of last 10 passwords |
+| Password storage | Salted adaptive hashing |
+| Approved hashing | Argon2id, bcrypt, PBKDF2 |
+| MFA | Required for critical systems |
+| Lockout threshold | 5 failed attempts |
+| Lockout duration | 15 minutes minimum |
+
+---
+
+2. Authentication Standards
+
+Systems must support:
+
+- MFA integration.
+- Strong password policies.
+- Secure session management.
+- Logging of authentication events.
+
+---
+
+3. Password Hashing Standards
+
+Required:
+
+- Unique salt per password.
+- Strong computational cost settings.
+- Secure cryptographic libraries.
+
+Forbidden:
+
+- Plain text storage.
+- Reversible encryption.
+- MD5 hashing.
+- SHA-1 hashing.
+
+---
+
+4. Privileged Account Standards
+
+Administrators must:
+
+- Use PAM solutions.
+- Enable MFA.
+- Use individual administrator accounts.
+- Avoid shared credentials.
+- Rotate privileged credentials automatically.
+
+---
+
+5. Review Requirements
+
+Technical password standards must be reviewed:
+
+- Annually.
+- After major security incidents.
+- After regulatory changes.
+
+---
+
+End of Technical Standard
