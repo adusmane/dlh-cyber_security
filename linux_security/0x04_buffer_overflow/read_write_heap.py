@@ -6,51 +6,62 @@ import sys
 
 
 def read_write_heap(pid, search_string, replace_string):
-    """Replace a string in the heap of a running process."""
-    search_bytes = search_string.encode('ascii')
-    replace_bytes = replace_string.encode('ascii')
+    """Search and replace a string in the heap of a process."""
+    if not search_string:
+        print("Error: search string cannot be empty")
+        return 1
+
+    if len(replace_string) > len(search_string):
+        print("Error: replacement cannot be longer than search string")
+        return 1
 
     try:
+        search_bytes = search_string.encode('ascii')
+        replace_bytes = replace_string.encode('ascii')
+
         heap_start = None
         heap_end = None
 
         with open('/proc/{}/maps'.format(pid), 'r') as maps:
             for line in maps:
                 if '[heap]' in line:
-                    address_range = line.split()[0]
-                    addresses = address_range.split('-')
+                    addresses = line.split()[0].split('-')
                     heap_start = int(addresses[0], 16)
                     heap_end = int(addresses[1], 16)
                     break
 
         if heap_start is None:
-            print("Heap not found")
+            print("Error: heap not found")
             return 1
 
         with open('/proc/{}/mem'.format(pid), 'rb+') as mem:
             mem.seek(heap_start)
             heap_data = mem.read(heap_end - heap_start)
 
-            offset = heap_data.find(search_bytes)
+            offset = 0
+            count = 0
 
-            if offset == -1:
-                print("String not found")
-                return 0
+            while True:
+                offset = heap_data.find(search_bytes, offset)
 
-            address = heap_start + offset
+                if offset == -1:
+                    break
 
-            if len(replace_bytes) <= len(search_bytes):
+                address = heap_start + offset
+
                 mem.seek(address)
                 mem.write(replace_bytes)
                 mem.write(b'\x00' * (
                     len(search_bytes) - len(replace_bytes)))
-            else:
-                print("Replacement string is too long")
-                return 1
 
-            print("String replaced at {}".format(hex(address)))
+                print("Replaced at address: {}".format(hex(address)))
 
-    except (IOError, OSError, ValueError) as error:
+                count += 1
+                offset += len(search_bytes)
+
+            print("Total replacements: {}".format(count))
+
+    except (IOError, OSError, ValueError, UnicodeError) as error:
         print("Error: {}".format(error))
         return 1
 
@@ -64,9 +75,10 @@ if __name__ == "__main__":
 
     try:
         pid = int(sys.argv[1])
+        if pid <= 0:
+            raise ValueError
     except ValueError:
-        print("Error: PID must be an integer")
+        print("Error: invalid PID")
         sys.exit(1)
 
     sys.exit(read_write_heap(pid, sys.argv[2], sys.argv[3]))
-
